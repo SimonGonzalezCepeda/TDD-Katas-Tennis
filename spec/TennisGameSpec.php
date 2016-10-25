@@ -74,6 +74,17 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winPoint();
         $this->score()->shouldReturn("Advantage " . $this->player2->name());
     }
+    function if_score_deauce_player2(){
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->player2->winPoint();
+        $this->player1->winPoint();
+        $this->score()->shouldReturn("Iguals");
+    }
 
     function if_score_15_iguals(){
         $this->player1->winPoint();
@@ -103,8 +114,19 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winPoint();
         $this->player1->winPoint();
         $this->player2->winPoint();
-        $this->player2->winPoint();
+        $this->player1->winPoint();
         $this->score()->shouldReturn("Advantage " . $this->player1->name());
+    }
+    function if_score_deauce_player1(){
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->player1->winPoint();
+        $this->player2->winPoint();
+        $this->score()->shouldReturn("Iguals");
     }
 
 
