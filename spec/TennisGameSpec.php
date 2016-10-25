@@ -129,5 +129,4 @@ class TennisGameSpec extends ObjectBehavior
         $this->score()->shouldReturn("Iguals");
     }
 
-
 }
