@@ -2,6 +2,9 @@
 
 class Player
 {
+    /**
+     * @var array
+     */
     protected $code = [
         0 => "0",
         1 => "15",
@@ -9,8 +12,14 @@ class Player
         4 => "40"
     ];
 
+    /**
+     * @var string
+     */
     protected $name;
 
+    /**
+     * @var integer
+     */
     protected $points;
 
     /**
@@ -24,18 +33,32 @@ class Player
         $this->points = $points;
     }
 
+    /**
+     *
+     */
     public function winPoint()
     {
         $this->points += 1;
     }
 
+    /**
+     * @return mixed
+     */
     public function points()
     {
         return $this->points;
     }
 
+    /**
+     * @return mixed
+     */
     public function score()
     {
         return $this->points;
+    }
+
+    public function name()
+    {
+        return $this->name;
     }
 }

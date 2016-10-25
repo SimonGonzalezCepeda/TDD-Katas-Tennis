@@ -1,6 +1,9 @@
 <?php
 
 
+/**
+ * Class TennisGame
+ */
 class TennisGame
 {
     /**
