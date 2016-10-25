@@ -2,6 +2,12 @@
 
 class Player
 {
+    protected $points = [
+        0 => "0",
+        1 => "15",
+        2 => "30",
+        4 => "40"
+    ];
 
     protected $name;
 
@@ -20,7 +26,7 @@ class Player
 
     public function winPoint()
     {
-        $this->score = "15";
+        $this->score += 1;
     }
 
     public function score()
