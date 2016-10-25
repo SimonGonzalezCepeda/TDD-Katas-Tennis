@@ -29,6 +29,18 @@ class TennisGame
      */
     public function score()
     {
+        if($this->player1->score() >3 || $this->player2->score() >3){
+            $diferencia = $this->player1->score() - $this->player2->score();
+            if($diferencia > 0){
+                return "Avantatge" . $this->player1->name();
+            }
+            if($diferencia == 0){
+                return "Iguals";
+            }
+            if($diferencia < 0){
+                return "Avantatge" . $this->player2->name();
+            }
+        }
 
         if($this->player1->score() == $this->player2->score()){
             return $this->player1->score(). ' - Igual';
